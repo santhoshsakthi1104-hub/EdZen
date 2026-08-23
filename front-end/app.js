@@ -1378,7 +1378,7 @@ async function adminAddUser(event) {
     semester: null
   };
 
-  if (appState.institution === 'school' && role === 'student') {
+  if (appState.institution === 'school' || role === 'student') {
     const classField = document.getElementById('admin-school-class');
     payload.class_id = classField ? classField.value.trim() || null : null;
   }
